@@ -28,6 +28,27 @@
   color: #61dafb;
 }
 
+.appheader{
+  background-color: blue;
+  padding: 10px;
+  text-align: left;
+}
+
+.appheader a{
+  color: white;
+  padding: 5px;
+  text-decoration: none;
+}
+table{
+  width: 100%;
+  margin-top: 5px;
+}
+
+td{
+  border: 2px solid #000;
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
