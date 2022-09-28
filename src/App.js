@@ -12,7 +12,7 @@ function App() {
   const[title,titleupdate]=useState("React Tutorial")
   
   return (
-    <div className="App">
+    <div className="container">
       <BrowserRouter>
         <AppHeader title={title}></AppHeader>
 

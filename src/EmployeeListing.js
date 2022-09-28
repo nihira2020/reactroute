@@ -7,34 +7,44 @@ const EmployeeListing = () => {
     return (
         <div>
 
-            {isloaded && <div>Please Wait</div>}
-            {errordata && <div>{errordata}</div>}
-            {data &&
-                <table>
-                    <thead>
-                        <tr>
-                            <td>ID</td>
-                            <td>Name</td>
-                            <td>DOB</td>
-                            <td>Salary</td>
-                            <td>Action</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {data.map((item) => (
-                            <tr key={item.id}>
-                                <td>{item.id}</td>
-                                <td>{item.name}</td>
-                                <td>{item.dob}</td>
-                                <td>{item.salary}</td>
-                                <td> <Link to={"/empdetails/" + item.id}>Details</Link></td>
-                            </tr>
-                        ))}
+            <div className="card" >
+                <div class="card-body">
+                    <h5 class="card-title">Employee Listing</h5>
 
 
-                    </tbody>
-                </table>
-            }
+
+                    {isloaded && <div>Please Wait</div>}
+                    {errordata && <div>{errordata}</div>}
+
+
+                    {data &&
+                        <table className="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <td>ID</td>
+                                    <td>Name</td>
+                                    <td>DOB</td>
+                                    <td>Salary</td>
+                                    <td>Action</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {data.map((item) => (
+                                    <tr key={item.id}>
+                                        <td>{item.id}</td>
+                                        <td>{item.name}</td>
+                                        <td>{item.dob}</td>
+                                        <td>{item.salary}</td>
+                                        <td> <Link className="btn btn-primary" to={"/empdetails/" + item.id}>Details</Link></td>
+                                    </tr>
+                                ))}
+
+
+                            </tbody>
+                        </table>
+                    }
+                </div>
+            </div>
 
         </div>
     );

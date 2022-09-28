@@ -45,15 +45,7 @@
   float: left;
   margin-left: 5%;
 }
-table{
-  width: 100%;
-  margin-top: 5px;
-  padding: 20px;
-}
 
-td{
-  border: 2px solid #000;
-}
 
 
 @keyframes App-logo-spin {
