@@ -31,13 +31,19 @@
 .appheader{
   background-color: blue;
   padding: 10px;
-  text-align: left;
+  text-align: right;
 }
 
 .appheader a{
   color: white;
   padding: 5px;
   text-decoration: none;
+}
+.appheader span{
+  color: white;
+  font-weight: bold;
+  float: left;
+  margin-left: 5%;
 }
 table{
   width: 100%;

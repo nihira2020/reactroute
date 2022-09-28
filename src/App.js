@@ -7,14 +7,17 @@ import Contact from './Contact';
 import Aboutus from './Aboutus';
 import Empdetails from './Empdetails';
 import EmployeeListing from './EmployeeListing';
+import { useState } from 'react';
 function App() {
+  const[title,titleupdate]=useState("React Tutorial")
+  
   return (
     <div className="App">
       <BrowserRouter>
-        <AppHeader></AppHeader>
+        <AppHeader title={title}></AppHeader>
 
         <Routes>
-
+        <Route path='/' element={<Home/>}></Route>
           <Route path='/home' element={<Home/>}></Route>
           <Route path='/contact' element={<Contact/>}></Route>
           <Route path='/about' element={<Aboutus/>}></Route>
