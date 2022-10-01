@@ -8,8 +8,8 @@ const EmployeeListing = () => {
         <div>
 
             <div className="card" >
-                <div class="card-body">
-                    <h5 class="card-title">Employee Listing</h5>
+                <div className="card-body">
+                    <h5 className="card-title">Employee Listing</h5>
 
 
 

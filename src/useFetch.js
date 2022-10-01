@@ -7,11 +7,12 @@ const useFetch = (url) => {
 
 
     useEffect(() => {
-        fetch(url).then(res => {
-            if(!res.ok){
+        const abortcont = new AbortController();
+        fetch(url, { signal: abortcont.signal }).then(res => {
+            if (!res.ok) {
                 throw new Error("API call has issue");
             }
-            return res.json();            
+            return res.json();
         }).then(result => {
             setTimeout(() => {
                 dataupdate(result);
@@ -19,9 +20,15 @@ const useFetch = (url) => {
                 loadchange(false);
             }, 20);
         }).catch(err => {
-            errorupdate(err.message);
-            loadchange(false);
+            if (err.name === 'AbortError') {
+                console.log('Abort error');
+            } else {
+                errorupdate(err.message);
+                loadchange(false);
+            }
         })
+        return () => abortcont.abort();
+
     }, [url])
     return { data, errordata, isloaded }
 }
