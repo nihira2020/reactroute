@@ -21,7 +21,7 @@ const useFetch = (url) => {
             }, 20);
         }).catch(err => {
             if (err.name === 'AbortError') {
-                console.log('Abort error');
+              //  console.log('Abort error');
             } else {
                 errorupdate(err.message);
                 loadchange(false);
