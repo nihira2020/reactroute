@@ -16,7 +16,7 @@ const Empdetails = () => {
                     Employee Name is : {data.name} <i>({data.id})</i>
                 </h2>
                 <h3>
-                    Date of Birth is : {data.dob}
+                    Role is : {data.role}
                 </h3>
                 <h4> Salary is : {data.salary}</h4>
                 <div>

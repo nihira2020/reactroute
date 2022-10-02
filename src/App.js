@@ -8,6 +8,7 @@ import Aboutus from './Aboutus';
 import Empdetails from './Empdetails';
 import EmployeeListing from './EmployeeListing';
 import { useState } from 'react';
+import AddEmployee from './AddEmployee';
 function App() {
   const[title,titleupdate]=useState("React Tutorial")
   
@@ -25,6 +26,8 @@ function App() {
 
           <Route path='/empdetails/:id/:name' element={<Empdetails/>}></Route>
           <Route path='/empdetails/:id' element={<Empdetails/>}></Route>
+          <Route path='/editemployee/:empid' element={<AddEmployee/>}></Route>
+          
 
         </Routes>
 

@@ -3,25 +3,25 @@
     {
       "id": 1,
       "name": "Jos butler",
-      "dob": "20/05/1995",
+      "role": "Delivery Head",
       "salary":"20000"
     },
     {
       "id": 2,
       "name": "Joe Root",
-      "dob": "20/05/1995",
+      "role": "Manager",
       "salary":"30000"
     },
     {
       "id": 3,
       "name": "Jony Bairstow",
-      "dob": "20/05/1995",
+      "role": "Engineer",
       "salary":"40000"
     },
     {
       "id": 4,
       "name": "Ben Stokes",
-      "dob": "20/05/1995",
+      "role": "Associate",
       "salary":"50000"
     }
   ]

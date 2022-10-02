@@ -8,6 +8,9 @@ const EmployeeListing = () => {
     const Redirectdetail=(id)=>{
         navigate('/empdetails/'+id)
     }
+    const FunEdit=(id)=>{
+        navigate('/editemployee/'+id)
+    }
     return (
         <div>
 
@@ -27,7 +30,7 @@ const EmployeeListing = () => {
                                 <tr>
                                     <td>ID</td>
                                     <td>Name</td>
-                                    <td>DOB</td>
+                                    <td>Role</td>
                                     <td>Salary</td>
                                     <td>Action</td>
                                 </tr>
@@ -37,10 +40,11 @@ const EmployeeListing = () => {
                                     <tr key={item.id}>
                                         <td>{item.id}</td>
                                         <td>{item.name}</td>
-                                        <td>{item.dob}</td>
+                                        <td>{item.role}</td>
                                         <td>{item.salary}</td>
                                         {/* <td> <Link className="btn btn-primary" to={"/empdetails/" + item.id}>Details</Link></td> */}
-                                        <td><button className="btn btn-primary" onClick={()=>{Redirectdetail(item.id)}}>Details</button></td>
+                                        <td><button className="btn btn-primary" onClick={()=>{Redirectdetail(item.id)}}>Details</button> | 
+                                        <button className="btn btn-primary" onClick={()=>{FunEdit(item.id)}}>Edit</button></td>
                                     </tr>
                                 ))}
 
