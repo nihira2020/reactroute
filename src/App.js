@@ -23,6 +23,7 @@ function App() {
           <Route path='/contact' element={<Contact/>}></Route>
           <Route path='/about' element={<Aboutus/>}></Route>
           <Route path='/employee' element={<EmployeeListing/>}></Route>
+          <Route path='/addemployee' element={<AddEmployee/>}></Route>
 
           <Route path='/empdetails/:id/:name' element={<Empdetails/>}></Route>
           <Route path='/empdetails/:id' element={<Empdetails/>}></Route>

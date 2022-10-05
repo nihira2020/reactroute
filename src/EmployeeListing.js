@@ -16,6 +16,7 @@ const EmployeeListing = () => {
 
             <div className="card" >
                 <div className="card-body">
+                    <Link className="btn btn-success" to="/addemployee">Add New</Link>
                     <h5 className="card-title">Employee Listing</h5>
 
 

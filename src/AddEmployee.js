@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import useFetch from "./useFetch";
 
 const AddEmployee = () => {
@@ -7,12 +7,27 @@ const AddEmployee = () => {
     const [id, idchange] = useState(0);
     const [name, namechange] = useState('');
     const [role, rolechange] = useState('');
+    const [salary, salarychange] = useState(0);
+
+    const navigate=useNavigate();
 
     // functions
     const handlesubmit = (e) => {
         e.preventDefault();
-        const empobj = { id, name, role };
-        console.log(empobj);
+        const empobj = { name, role, salary };
+        
+        // console.log(empobj);
+
+        fetch("http://localhost:8000/employee", {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify(empobj)
+        }).then(() => {
+            //console.log("data added");
+            navigate(-1);
+        }).catch((err) => {
+            console.log(err.message);
+        })
     }
 
 
@@ -37,6 +52,11 @@ const AddEmployee = () => {
                             <label>Role</label>
                             <input value={role} onChange={e => rolechange(e.target.value)} className="form-control" required></input>
                             {role.length == 0 && <span className="errormessage"> Please enter the Role</span>}
+                        </div>
+                        <div className="form-group">
+                            <label>Salary</label>
+                            <input value={salary} onChange={e => salarychange(e.target.value)} className="form-control" ></input>
+
                         </div>
                         <div className="form-group">
                             <br></br>

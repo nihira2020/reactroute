@@ -4,26 +4,43 @@
       "id": 1,
       "name": "Jos butler",
       "role": "Delivery Head",
-      "salary":"20000"
+      "salary": "20000"
     },
     {
       "id": 2,
       "name": "Joe Root",
       "role": "Manager",
-      "salary":"30000"
+      "salary": "30000"
     },
     {
       "id": 3,
       "name": "Jony Bairstow",
       "role": "Engineer",
-      "salary":"40000"
+      "salary": "40000"
     },
     {
       "id": 4,
       "name": "Ben Stokes",
       "role": "Associate",
-      "salary":"50000"
+      "salary": "50000"
+    },
+    {
+      "name": "Jhon Peter",
+      "role": "Admin",
+      "salary": "10000",
+      "id": 5
+    },
+    {
+      "name": "Amar sigh",
+      "role": "Developer",
+      "salary": "50000",
+      "id": 6
+    },
+    {
+      "name": "Dhoni",
+      "role": "Admin",
+      "salary": "300000",
+      "id": 7
     }
   ]
-  
 }
