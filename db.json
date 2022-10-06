@@ -25,16 +25,16 @@
       "salary": "50000"
     },
     {
-      "name": "Jhon Peter",
-      "role": "Admin",
-      "salary": "10000",
-      "id": 5
+      "id": 5,
+      "name": "Jhon Peter N",
+      "role": "Developer",
+      "salary": "30000"
     },
     {
+      "id": 6,
       "name": "Amar sigh",
       "role": "Developer",
-      "salary": "50000",
-      "id": 6
+      "salary": "60000"
     },
     {
       "name": "Dhoni",
