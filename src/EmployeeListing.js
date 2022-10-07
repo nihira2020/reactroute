@@ -11,6 +11,19 @@ const EmployeeListing = () => {
     const FunEdit=(id)=>{
         navigate('/editemployee/'+id)
     }
+    const FunRemove=((id)=>{
+        if(window.confirm("Do you want to remove?")){
+            fetch("http://localhost:8000/employee/"+id,
+            {method:"DELETE"}).then(()=>{
+
+                window.location.reload();
+
+            }).catch((err)=>{
+                console.log(err.message)
+            })
+        }
+
+    })
     return (
         <div>
 
@@ -45,7 +58,9 @@ const EmployeeListing = () => {
                                         <td>{item.salary}</td>
                                         {/* <td> <Link className="btn btn-primary" to={"/empdetails/" + item.id}>Details</Link></td> */}
                                         <td><button className="btn btn-primary" onClick={()=>{Redirectdetail(item.id)}}>Details</button> | 
-                                        <button className="btn btn-primary" onClick={()=>{FunEdit(item.id)}}>Edit</button></td>
+                                        <button className="btn btn-primary" onClick={()=>{FunEdit(item.id)}}>Edit</button> |
+                                        <button className="btn btn-danger" onClick={()=>{FunRemove(item.id)}}>Detete</button>
+                                        </td>
                                     </tr>
                                 ))}
 

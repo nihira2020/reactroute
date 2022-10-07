@@ -13,12 +13,6 @@
       "salary": "30000"
     },
     {
-      "id": 3,
-      "name": "Jony Bairstow",
-      "role": "Engineer",
-      "salary": "40000"
-    },
-    {
       "id": 4,
       "name": "Ben Stokes",
       "role": "Associate",
@@ -29,12 +23,6 @@
       "name": "Jhon Peter N",
       "role": "Developer",
       "salary": "30000"
-    },
-    {
-      "id": 6,
-      "name": "Amar sigh",
-      "role": "Developer",
-      "salary": "60000"
     },
     {
       "name": "Dhoni",
