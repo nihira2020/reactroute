@@ -49,6 +49,14 @@
   color: red;
 }
 
+.errorpage{
+  color: red;
+  font-size: 200px;
+}
+.align{
+  text-align: center;
+}
+
 
 
 @keyframes App-logo-spin {
